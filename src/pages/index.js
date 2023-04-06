@@ -7,14 +7,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function Home() {
-  useEffect(() => {
-    const getJobData = async () => {
-      const newData = await getAllJobs();
-      console.log(newData);
-    };
-
-    getJobData();
-  }, []);
   return (
     <>
       <Head>
@@ -26,7 +18,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center w-full">
+      <main className="flex flex-col items-center w-full bg-gray-200">
         <Navbar />
         <div className="m-20 w-[50%] flex justify-center">
           <JobForm />

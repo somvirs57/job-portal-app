@@ -18,6 +18,8 @@ const jobSchema = yup.object().shape({
   skills: yup.string().required("Skills of job is required"),
   companyLogo: yup.string().required("Company logo is required"),
   location: yup.string().required("Location of job is required"),
+  // createdAt: yup.date().min(new Date()).required(),
+  // expiringAt: yup.date().required(),
   //   captcha: yup.string().required(),
 });
 

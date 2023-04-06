@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Navbar = (props) => {
+  const router = useRouter();
+
   return (
     <nav className="w-full border-gray-200 bg-blue-200 dark:bg-gray-800 dark:border-gray-700">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -14,7 +17,9 @@ const Navbar = (props) => {
             <li>
               <Link
                 href="/"
-                className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                className={`block py-2 pl-3 pr-4  rounded md:bg-transparent ${
+                  router.pathname === "/" ? "md:text-blue-700" : ""
+                } md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent`}
                 aria-current="page"
               >
                 New job
@@ -22,8 +27,10 @@ const Navbar = (props) => {
             </li>
             <li>
               <Link
-                href="#"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                href="/jobs"
+                className={`block py-2 pl-3 pr-4  rounded md:bg-transparent ${
+                  router.pathname === "/jobs" ? "md:text-blue-700" : ""
+                } md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent`}
               >
                 All Jobs
               </Link>
