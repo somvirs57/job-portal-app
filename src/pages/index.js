@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import Head from "next/head";
-import Image from "next/image";
 import { JobForm, Navbar } from "@/components";
-import { getAllJobs } from "@/firebase";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -18,7 +16,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex flex-col items-center w-full bg-gray-200">
+      <main className="flex flex-col items-center w-full h-full bg-gray-200">
         <Navbar />
         <div className="m-20 w-[50%] flex justify-center">
           <JobForm />
