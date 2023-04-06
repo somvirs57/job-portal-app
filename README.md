@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-1. Install node_modules using /_npm i --legacy-peer-deps_/ : using --legacy-peer-deps as one of the 3rd party captcha library is based on an older version of react. However this doesnt effect the production and also a better library for captcha can be used
+1. Install node*modules using \_npm i --legacy-peer-deps* : using --legacy-peer-deps as one of the 3rd party captcha library is based on an older version of react. However this doesnt effect the production and also a better library for captcha can be used
 
 2. Run the development server:
 
